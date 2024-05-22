@@ -6,6 +6,9 @@
     --title-font-weight: 700;
     --bg-color: #FFFFFF;
     --accent-color: #000000;
+    --button-text-color: #FFFFFF;
+    --heart-contour-color: #000000;
+    --heart-fill-color: #ff0000;
     --bg-image:
         repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
         repeating-linear-gradient(to bottom,#d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
