@@ -136,17 +136,56 @@
 
 .article_container {
   position: relative;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  line-height: 0;
 }
 
 .article_img {
-  border-top: 2px solid var(--accent-color);
-  border-bottom: 2px solid var(--accent-color);;
+  max-inline-size: 696px;
+  inline-size: 100%;
+  max-block-size: 696px;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.img_nature {
+  filter: invert(0.7);
+}
+
+.img_leaf {
+  filter: grayscale(1) invert(1);
+}
+
+.img_thinking {
+  filter: brightness(40%);
+}
+
+.img_bike {
+  filter: saturate(200%);
+}
+
+.img_dog {
+  filter: hue-rotate(30deg);
+}
+
+.img_camera {
+  filter: contrast(120%);
+}
+
+.img_abuss {
+  filter: grayscale(1);
+}
+
+.img_car {
+  filter: hue-rotate(180deg) saturate(110%);
 }
 
 .article_label {
   position: absolute;
   z-index: 1;
-  top: 25px;
+  top: 27px;
   right: 25px;
   color: var(--accent-color);
   font-family: var(--accent-font), fantasy;
@@ -162,13 +201,6 @@
     text-stroke: 1px var(--bg-color);
     text-shadow: none;
   }
-}
-
-.article_img {
-  inline-size: 100%;
-  block-size: 100%;
-  object-fit: cover;
-  object-position: center;
 }
 
 .article-text {
@@ -472,13 +504,29 @@ footer .floppy {
 @media (max-width: 375px) {
   .header {
     inline-size: 100vw;
+    min-block-size: 323px;
+  }
+  .header__title {
+    margin-block-start: 120px;
   }
   .article {
     inline-size: 100vw;
     min-block-size: 329px;
   }
+  .article_title {
+    max-inline-size: 351px;
+  }
+  .article_img {
+    max-inline-size: 375px;
+    max-block-size: 375px;
+  }
+  .article_label {
+    top: 36px;
+    right: 13px;
+  }
   .article-text {
     max-inline-size: 317px;
+    margin-block: 27px 0;
   }
   .footer_button-save {
     inline-size: 306px;
