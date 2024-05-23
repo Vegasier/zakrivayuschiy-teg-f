@@ -49,7 +49,7 @@
       <article class="article">
         <h3 class="article_title">Фритрек и нулевой спринт: Подготовка к работе</h3>
         <div class="article_container">
-          <label class="article_label">&lt;/HTML&gt;</label>
+          <label class="article_label">Начало</label>
           <img
             src="./images/car.png"
             alt="Картинка машины"
@@ -66,7 +66,7 @@
           С другой стороны - энтузиазм и желание поскорее начать учиться.
         </p>
         <div class="article_buttons">
-          <button class="card__icon-button">
+          <button class="card__icon-button" type="button">
             <svg
               class="like-icon"
               width="39"
@@ -99,19 +99,40 @@
               />
           </svg>
           </button>
-          <button class="card__like-button">
+          <button class="card__like-button" type="button">
             <span class="button__text">Like</span>
           </button>
         </div>
       </article>
     </main>
     <footer>
-      <button class="footer_button-save">
-        <svg class="footer_floppy">
-          <use href="./svg/floppy.svg#floppy_footer"></use>
+      <button 
+        class="footer_button-save" 
+        type="button"
+        onclick="window['dialog-save'].showModal()"
+        aria-controls="dialog-save"
+      >
+        <svg class="floppy" width="21" height="21">
+          <use href="./svg/floppy.svg#floppy"></use>
         </svg>
         <span class="button__text">Сохранить на память</span>
       </button>
+      <dialog id="dialog-save" class="dialog">
+      <div class="dialog_container">
+        <svg class="floppy_dialog" width="39" height="39">
+          <use href="./svg/floppy.svg#floppy_dialog"></use>
+        </svg>
+        <p class="dialog__text">Вставьте
+          дискету, чтобы продолжить</p>
+      </div>
+      <button
+        class="dialog_button"
+        type="button"
+        onclick="window['dialog-save'].close()"
+      >
+        <span class="button__text">Ок</span>
+      </button>
+    </dialog>
     </footer>
     <script src="./scripts/like.js"></script>
   </body>
