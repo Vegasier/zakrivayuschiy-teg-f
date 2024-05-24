@@ -443,6 +443,11 @@ footer .floppy {
   inline-size: 100%;
 }
 
+.dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+} 
+
 .dialog::backdrop {
   background-color: rgba(0, 0, 0, 0.75)
 }
