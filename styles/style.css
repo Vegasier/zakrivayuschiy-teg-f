@@ -432,17 +432,19 @@
   }
   .article__title {
     max-inline-size: 351px;
+    padding-block-end: 5px;
   }
   .article__img {
     max-inline-size: 371px;
     max-block-size: 371px;
   }
   .article__label {
-    top: 25px;
-    right: 13px;
+    top: 30px;
+    right: 12px;
   }
   .article__text {
     max-inline-size: 317px;
+    margin-block: 25px 3px;
   }
   .footer__button-save {
     min-inline-size: 306px;
