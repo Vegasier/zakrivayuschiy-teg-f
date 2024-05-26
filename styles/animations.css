@@ -29,6 +29,55 @@
   animation: moveArrow 0.5s ease-in-out infinite alternate;
 }
 
+.theme-menu__button::after {
+  content: "";
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  width: 86%;
+  height: 2px;
+  background: var(--accent-color, #000);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color, #000);
+  transition: box-shadow 0.3s;
+}
+
+.card__icon-button:focus-visible {
+  box-shadow: none;
+  border: 2px solid var(--accent-color, #000);
+  transition: border 0.3s;
+}
+
+.button__scale-hover {
+  transition: color 0.5s ease-in-out;
+}
+
+.button__scale-hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent-color, #000);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease-in-out;
+}
+
+.button__scale-hover:hover:before {
+  transform: scaleX(1);
+}
+
 .heart {
   transform-origin: center;
 }
